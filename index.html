@@ -1,11 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Web</title>
-</head>
-<body>
-    <p>My first web page</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tresor - Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" 
+/>
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <nav>
+      <div class="nav-inner">
+        <a class="logo" href="#home"><i class="fa-solid fa-gem"></i>Tresor</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#about"><i class="fa-solid fa-user"></i>About</a>
+          </li>
+          <li>
+            <a href="#skills"><i class="fa-solid fa-lightbulb"></i>Skills</a>
+          </li>
+          <li>
+            <a href="#experience"
+              ><i class="fa-solid fa-briefcase"></i>Experience</a
+            >
+          </li>
+          <li>
+            <a href="#projects"
+              ><i class="fa-solid fa-diagram-project"></i>Projects</a
+            >
+          </li>
+          <li>
+            <a href="#testimonials"
+              ><i class="fa-solid fa-comments"></i>Testimonials</a
+            >
+          </li>
+          <li>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero-content">
+        <h1>Tresor</h1>
+        <p>Creative Developer & Digital Innovator</p>
+        <button
+          class="hire-me-btn"
+          onclick="
+            document
+              .getElementById('contact')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Hire Me
+        </button>
+      </div>
+    </header>
+
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          Hello! I'm Tresor, a passionate developer and designer with a keen eye
+          for creating exceptional digital experiences. With 5+ years in web
+          development, I specialize in building responsive, high-performance
+          applications that not only look stunning but also solve real-world
+          problems.
+        </p>
+        <p style="margin-top: 20px">
+          My approach combines clean code architecture with modern design
+          principles. I believe in continuous learning and staying updated with
+          the latest technologies to deliver cutting-edge solutions. When I'm
+          not coding, you can find me exploring new design trends or
+          contributing to open-source projects.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <h2>Skills & Technologies</h2>
+      <div class="skills">
+        <div class="skill-card">
+          <h3>Frontend Development</h3>
+          <p>
+            Building beautiful and interactive user interfaces with modern
+            frameworks and best practices. Expertise in creating responsive
+            designs that work seamlessly across all devices.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Vue.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">Tailwind</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>UI/UX Design</h3>
+          <p>
+            Creating beautiful and intuitive user interfaces with a focus on
+            user experience, accessibility, and modern design principles.
+            Prototyping and testing for optimal user satisfaction.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">Adobe XD</span>
+            <span class="tech-tag">Wireframing</span>
+            <span class="tech-tag">Prototyping</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Backend Development</h3>
+          <p>
+            Developing robust server-side solutions with emphasis on
+            scalability, security, and performance. Building APIs and databases
+            that power modern applications.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="experience-item">
+        <h3>Senior Frontend Developer</h3>
+        <div class="role">Tech Innovators Inc.</div>
+        <div class="duration">2022 - Present</div>
+        <p>
+          Leading the frontend team in developing scalable React applications.
+          Mentoring junior developers and implementing modern web technologies.
+          Improved performance metrics by 40%.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Full Stack Developer</h3>
+        <div class="role">Digital Solutions Ltd.</div>
+        <div class="duration">2019 - 2022</div>
+        <p>
+          Developed and maintained multiple production applications using MERN
+          stack. Collaborated with designers and backend teams to deliver
+          high-quality products.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <h3>Web Developer</h3>
+        <div class="role">Creative Agency</div>
+        <div class="duration">2017 - 2019</div>
+        <p>
+          Created responsive websites for diverse clients across various
+          industries. Implemented custom solutions and optimized existing
+          codebases for better performance.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>E-Commerce Platform</h3>
+          <p>
+            A full-featured e-commerce application built with React and Node.js.
+            Includes product catalog, shopping cart, payment integration, and
+            admin dashboard. Increased client's online sales by 60%.
+          </p>
+          <div class="project-meta">React • Node.js • MongoDB • Stripe</div>
+        </div>
+        <div class="project-card">
+          <h3>Project Management Tool</h3>
+          <p>
+            Collaborative project management application with real-time updates,
+            task tracking, and team communication. Used by 500+ teams worldwide.
+            Features drag-and-drop interface and analytics.
+          </p>
+          <div class="project-meta">
+            Vue.js • Express • WebSockets • Firebase
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Analytics Dashboard</h3>
+          <p>
+            Interactive data visualization dashboard with real-time analytics.
+            Processes millions of data points and provides actionable insights.
+            Custom charts and reporting features.
+          </p>
+          <div class="project-meta">React • D3.js • Python • PostgreSQL</div>
+        </div>
+        <div class="project-card">
+          <h3>Social Media App</h3>
+          <p>
+            Feature-rich social networking platform with user authentication,
+            feed, messaging, and notifications. Implements modern design
+            patterns and scalable architecture.
+          </p>
+          <div class="project-meta">React Native • Firebase • GraphQL</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+      <h2>What People Say</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>
+            "Tresor is an exceptional developer who delivered our project on
+            time and exceeded expectations. His attention to detail and code
+            quality are outstanding."
+          </p>
+          <div class="testimonial-author">- Sarah Johnson, Project Manager</div>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Working with Tresor was a game-changer. He transformed our outdated
+            website into a modern, responsive platform that improved our user
+            engagement significantly."
+          </p>
+          <div class="testimonial-author">- Michael Chen, Business Owner</div>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Tresor's expertise in both frontend and backend development makes
+            him a valuable asset. He's always willing to learn and adapt to new
+            technologies."
+          </p>
+          <div class="testimonial-author">- Emma Williams, CTO</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get In Touch</h2>
+      <p style="margin-top: 20px; font-size: 1.1em">
+        I'd love to collaborate on exciting projects or discuss opportunities.
+        Feel free to reach out through any of these channels:
+      </p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+          <a href="mailto:tresor@email.com">tresor@email.com</a>
+        </div>
+        <div class="contact-item">
+          <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+          <p><a href="tel:+1555123456">+1 (555) 123-4567</a></p>
+        </div>
+        <div class="contact-item">
+          <h3><i class="fa-solid fa-location-dot"></i> Location</h3>
+          <p>San Francisco, CA</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2026 Tresor. All rights reserved. |
+        <a href="#" style="color: var(--primary); text-decoration: none"
+          >Privacy Policy</a
+        >
+        •
+        <a href="#" style="color: var(--primary); text-decoration: none"
+          >Terms</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
